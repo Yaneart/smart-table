@@ -1,0 +1,1 @@
+https://github.com/Yaneart/smart-table
