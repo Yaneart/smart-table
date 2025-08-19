@@ -42,10 +42,10 @@ export function initTable(settings, onAction) {
             const row = cloneTemplate(rowTemplate);
             Object.keys(item).forEach(key => {
                 if (key in row.elements) {
-                    row.elements[key].textConten = item[key]
+                    row.elements[key].textContent = item[key]
                 }
              });
-            return row;
+            return row.container;
         });
         root.elements.rows.replaceChildren(...nextRows);
     }
