@@ -12,10 +12,10 @@ export function initFiltering(elements) {
 
     const applyFiltering = (query, state, action) => {
         // код с обработкой очистки поля
-        if (action && action.type === 'clear') {
-            const inputField = document.querySelector(`.${action.target}`);
+        if (action && action.name === 'clear') {
+            const inputField = action.parentElement.querySelector('input');
             inputField.value = '';
-            state[action.target] = '';
+            state[action.dataset.field] = '';
         }
          
 

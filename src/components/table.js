@@ -30,7 +30,7 @@ export function initTable(settings, onAction) {
             onAction();
         }, 500)
     });
-    root.container.addEventListener('submit', () => {
+    root.container.addEventListener('submit', (e) => {
         e.preventDefault();
         onAction(e.submitter);
     })
